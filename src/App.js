@@ -6,6 +6,7 @@ function App() {
     {title: 'insurance',amount: 202.45, date: new Date(2022,4,12)},
     {title: 'bread',amount: 22.45, date: new Date(2022,4,12)},
     {title: 'war',amount: 22232.45, date: new Date(2022,4,12)},
+    {title: 'vanity',amount: 20452.45, date: new Date(2022,4,12)},
     {title: 'vanity',amount: 20452.45, date: new Date(2022,4,12)}
   ];
 

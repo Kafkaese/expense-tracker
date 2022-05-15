@@ -5,12 +5,13 @@ function Expenses(props) {
 
     return (
         <div className="expenses">
-        <ExpenseItem data={props.expenses[0]}></ExpenseItem>
-        <ExpenseItem data={props.expenses[1]}></ExpenseItem>
-        <ExpenseItem data={props.expenses[2]}></ExpenseItem>
-        <ExpenseItem data={props.expenses[3]}></ExpenseItem>
-        </div>
-        
+            {
+            props.expenses.map((expense) => {
+
+                return (<ExpenseItem data={expense}></ExpenseItem>);
+            })
+        } </div>
+
     )
 }
 
