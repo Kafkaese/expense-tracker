@@ -7,7 +7,8 @@ function App() {
     {title: 'bread',amount: 22.45, date: new Date(2022,4,12)},
     {title: 'war',amount: 22232.45, date: new Date(2022,4,12)},
     {title: 'vanity',amount: 20452.45, date: new Date(2022,4,12)},
-    {title: 'vanity',amount: 20452.45, date: new Date(2022,4,12)}
+    {title: 'vanity',amount: 20452.45, date: new Date(2022,4,12)},
+    {title: 'korean food',amount: 29.54, date: new Date(2022,5,15)}
   ];
 
   return (
