@@ -11,19 +11,25 @@ const ExpenseForm = () => {
 
     const userInputChangeHandler = (event) => {
         if (event.target.type === 'text') {
-            setUserInput({
-                ...userInput,
-                title: event.target.value
+            setUserInput((prevState) => {
+                return {
+                    ...prevState,
+                    title: event.target.value
+                }
             });
         } else if (event.target.type === 'number') {
-            setUserInput({
-                ...userInput,
-                amount: event.target.value
+            setUserInput((prevState) => {
+                return {
+                    ...prevState,
+                    amount: event.target.value
+                }
             });
         } else {
-            setUserInput({
-                ...userInput,
-                date: event.target.value
+            setUserInput((prevState) => {
+                return {
+                    ...userInput,
+                    date: event.target.value
+                }
             });
         }
         console.log(userInput);
