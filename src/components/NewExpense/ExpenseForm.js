@@ -58,8 +58,8 @@ const ExpenseForm = (props) => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-    
-     /*    setUserInput((prevState) => {
+
+        /*    setUserInput((prevState) => {
             return {
                 ...userInput,
                 date: userInput.date
@@ -70,8 +70,8 @@ const ExpenseForm = (props) => {
         if (!Object.values(userInput).every(x => x === '')) {
             props.onSaveExpenseData(userInput);
         };
-        
-    
+
+
         setUserInput({title: '', amount: '', date: ''});
     };
 
@@ -79,17 +79,30 @@ const ExpenseForm = (props) => {
         <div className='new-expense__controls'>
             <div className='new-expense__control'>
                 <label>Title</label>
-                <input type='text' value={userInput.title}
+                <input type='text'
+                    value={
+                        userInput.title
+                    }
                     onChange={userInputChangeHandler}/>
             </div>
             <div className='new-expense__control'>
                 <label>Amount</label>
-                <input type='number' value={userInput.amount} min='0.01' step='0.01'
+                <input type='number'
+                    value={
+                        userInput.amount
+                    }
+                    min='0.01'
+                    step='0.01'
                     onChange={userInputChangeHandler}/>
             </div>
             <div className='new-expense__control'>
                 <label>Date</label>
-                <input type='date' value={userInput.date} min='2019-01-01' max='2022-12-31'
+                <input type='date'
+                    value={
+                        userInput.date
+                    }
+                    min='2019-01-01'
+                    max='2022-12-31'
                     onChange={userInputChangeHandler}/>
             </div>
         </div>
