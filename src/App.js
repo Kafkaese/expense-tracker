@@ -15,8 +15,8 @@ function App() { /*  let expenses = [
 
     const saveExpenseDataHandler = (savedUserInput) => {
         setExpenses([
-            ...expenses,
-            savedUserInput
+            savedUserInput,
+            ...expenses  
         ]);
     };
 
