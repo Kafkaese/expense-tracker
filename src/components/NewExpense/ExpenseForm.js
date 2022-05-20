@@ -59,14 +59,18 @@ const ExpenseForm = (props) => {
     const submitHandler = (event) => {
         event.preventDefault();
     
-        setUserInput((prevState) => {
+     /*    setUserInput((prevState) => {
             return {
                 ...userInput,
                 date: userInput.date
             }
-        });
+        }); */
 
-        props.onSaveExpenseData(userInput);
+        console.log(userInput)
+        if (!Object.values(userInput).every(x => x === '')) {
+            props.onSaveExpenseData(userInput);
+        };
+        
     
         setUserInput({title: '', amount: '', date: ''});
     };
