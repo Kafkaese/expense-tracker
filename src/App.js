@@ -1,23 +1,31 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import {useState} from 'react';
 
-function App() {
-
-  const expenses = [
-    {title: 'insurance',amount: 202.45, date: new Date(2022,4,12)},
-    {title: 'bread',amount: 22.45, date: new Date(2022,4,12)},
-    {title: 'war',amount: 22232.45, date: new Date(2022,4,12)},
-    {title: 'vanity',amount: 20452.45, date: new Date(2022,4,12)},
-    {title: 'vanity',amount: 20452.45, date: new Date(2022,4,12)},
-    {title: 'korean food',amount: 29.54, date: new Date(2022,5,15)}
+function App() { /*  let expenses = [
+    {title: 'insurance',amount: 202.45, date: new Date(2022,4,12), id: 0}
   ];
+ */
+    const [expenses, setExpenses] = useState([{
+            title: 'insurance',
+            amount: 202.45,
+            date: new Date(2022, 4, 12),
+            id: 0
+        }]);
 
-  return (
-    <div>
-      <NewExpense />
-      <Expenses expenses={expenses}></Expenses>
-   </div>
-  );
+    const saveExpenseDataHandler = (savedUserInput) => {
+        setExpenses([
+            ...expenses,
+            savedUserInput
+        ]);
+    };
+
+    return (
+        <div>
+            <NewExpense onSaveExpenseData={saveExpenseDataHandler}/>
+            <Expenses expenses={expenses}></Expenses>
+        </div>
+    );
 }
 
 export default App;
