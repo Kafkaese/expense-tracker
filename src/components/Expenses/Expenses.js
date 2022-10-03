@@ -30,6 +30,7 @@ const Expenses = (props) => {
             <Card className="expenses">
                 <ExpensesFilter selectedValue={filterYear}
                     filterHandler={filterExpenses}></ExpensesFilter>
+                {filteredExpenses.length === 0 && <p>No expenses for selected year.</p>}
                 {
                 filteredExpenses.map(expense => <ExpenseItem key={
                         expense.id
