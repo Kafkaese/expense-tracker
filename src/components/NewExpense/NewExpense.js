@@ -19,7 +19,7 @@ const NewExpense = (props) => {
     };
 
     const toggleFormHandler = (toggleValue) => {
-        setShowForm(true);
+        setShowForm(toggleValue);
     }
 
     console.log(showForm)
@@ -33,7 +33,7 @@ const NewExpense = (props) => {
     else {
         return (
             <div className='new-expense'>
-                <ExpenseForm onSaveExpenseData={saveExpenseDataHAndler}/>
+                <ExpenseForm onSaveExpenseData={saveExpenseDataHAndler} toggleForm={toggleFormHandler}/>
             </div>
         );
     }

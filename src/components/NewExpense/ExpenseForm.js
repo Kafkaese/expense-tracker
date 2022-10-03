@@ -56,6 +56,11 @@ const ExpenseForm = (props) => {
         });
     }; */
 
+    const toggleFormOff = () => {
+        console.log('form off')
+        props.toggleForm(false)
+    }
+
     const submitHandler = (event) => {
         event.preventDefault();
 
@@ -96,6 +101,9 @@ const ExpenseForm = (props) => {
                     max='2022-12-31'
                     onChange={userInputChangeHandler}/>
             </div>
+        </div>
+        <div className='new-expense__actions'>
+            <button onClick={toggleFormOff}>Cancel</button>
         </div>
         <div className='new-expense__actions'>
             <button type='submit'>Add Expense</button>
