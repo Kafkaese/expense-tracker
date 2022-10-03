@@ -102,11 +102,12 @@ const ExpenseForm = (props) => {
                     onChange={userInputChangeHandler}/>
             </div>
         </div>
-        <div className='new-expense__actions'>
+        <div className='new-expense__controls'><div className='new-expense__actions'>
             <button onClick={toggleFormOff}>Cancel</button>
         </div>
         <div className='new-expense__actions'>
-            <button type='submit'>Add Expense</button>
+            <button type='submit'>Add Expense</button></div>
+        
         </div>
     </form>
 
